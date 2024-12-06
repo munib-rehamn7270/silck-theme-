@@ -1,25 +1,25 @@
 <style>
-.cl_hero_banner {
+.hero_banner {
   width: 100%;
   height: auto;
   overflow: hidden;
   padding: 16px;
 }
-.cl_hero_banner img {
+.hero_banner img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.cl_hero_banner video {
+.hero_banner video {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
 }
-.cl_hero_banner .container {
+.hero_banner .container {
    width: 100%;
 }
-.cl_hero_banner .banner_inner {
+.hero_banner .banner_inner {
   max-width: 1264px;
   margin: 0 auto;
   padding: 0 20px;
@@ -27,12 +27,12 @@
   align-items: center;
   gap: 30px;
 }
-.cl_hero_banner .banner_content {
+.hero_banner .banner_content {
   max-width: 445px;
   width: 100%;
   padding-bottom: 80px;
 }
-.cl_hero_banner h2.heading {
+.hero_banner h2.heading {
   color: #515864;
   font-family: Avenir;
   font-size: 56px;
@@ -41,12 +41,12 @@
   margin: 0;
   padding-bottom: 20px;
 }
-.cl_hero_banner span.desc {
+.hero_banner span.desc {
   padding-bottom: 20px;
   display: block;
 }
-.cl_hero_banner span.desc,
-.cl_hero_banner span.desc p {
+.hero_banner span.desc,
+.hero_banner span.desc p {
   color: #515864;
   font-family: Avenir;
   font-size: 16px;
@@ -55,7 +55,7 @@
   line-height: 140%;
   margin: 0;
 }
-.cl_hero_banner a.banner_btn {
+.hero_banner a.banner_btn {
   text-align: center;
   font-family: Avenir;
   font-size: 14px;
@@ -73,7 +73,7 @@
   transition: background 0.4s ease-in-out, color 0.4s ease-in-out;
   position: relative;
 }
-.cl_hero_banner a.banner_btn:after {
+.hero_banner a.banner_btn:after {
   content: '';
   background: linear-gradient(0deg, rgba(34,110,195,0.8939950980392157) 0%, rgba(0,0,0,0) 60%);
   width: 100%;
@@ -85,64 +85,64 @@
   bottom: 0;
   left: 0;
 }
-.cl_hero_banner a.banner_btn:hover:after {
+.hero_banner a.banner_btn:hover:after {
   opacity: 1;
 }
 
-.cl_hero_banner .banner_type {
+.hero_banner .banner_type {
   max-width: 730px;
 }
-.cl_hero_banner .hero_mobile {
+.hero_banner .hero_mobile {
  display: none; 
 }
 @media screen and (max-width: 991px) {
-.cl_hero_banner .hero_desktop {
+.hero_banner .hero_desktop {
   display: none;
 }  
-.cl_hero_banner .hero_mobile {
+.hero_banner .hero_mobile {
   display: block;
 }  
-.cl_hero_banner .banner_inner {
+.hero_banner .banner_inner {
   flex-direction: column-reverse;
 }
-.cl_hero_banner .banner_type {
+.hero_banner .banner_type {
   max-width: 520px;
 }
-.cl_hero_banner h2.heading {
+.hero_banner h2.heading {
   font-size: 42px;
   line-height: 50px;
   text-align: center;
   padding-bottom: 10px;
 }
-.cl_hero_banner span.desc,
-.cl_hero_banner span.desc p {
+.hero_banner span.desc,
+.hero_banner span.desc p {
     text-align: center;
 }
-.cl_hero_banner a.banner_btn {
+.hero_banner a.banner_btn {
   margin: 0px auto;
 }
 }
 @media screen and (max-width: 767px) {
-  .cl_hero_banner .banner_content {
+  .hero_banner .banner_content {
     max-width: 360px;
     width: 100%;
   }
-  .cl_hero_banner h2.heading {
+  .hero_banner h2.heading {
     font-size: 32px;
     line-height: 38px;
   }
-  .cl_hero_banner span.desc, 
-  .cl_hero_banner span.desc p {
+  .hero_banner span.desc, 
+  .hero_banner span.desc p {
     font-size: 14px;
   }
 }
 </style>
 {% style %}
-#cl_hero_banner-{{ section.id }} a.banner_btn {
+#hero_banner-{{ section.id }} a.banner_btn {
   color:{{ section.settings.btn_text_color }}; 
   background-color:{{ section.settings.btn_bg_color }}; 
 }
-#cl_hero_banner-{{ section.id }} {
+#hero_banner-{{ section.id }} {
   background-color:{{ section.settings.bg_color }};
   padding-top:{{ section.settings.desktop_padding_top }}px;
   padding-bottom:{{ section.settings.desktop_padding_bottom }}px;
@@ -150,7 +150,7 @@
   margin-bottom:{{ section.settings.desktop_margin_bottom }}px;
 }
 @media screen and (max-width: 991px) { 
-  #cl_hero_banner-{{ section.id }} {
+  #hero_banner-{{ section.id }} {
     padding-top:{{ section.settings.mbl_padding_top }}px;
     padding-bottom:{{ section.settings.mbl_padding_bottom }}px;
     margin-top:{{ section.settings.mbl_margin_top }}px;
@@ -158,8 +158,8 @@
   }
 }
 {% endstyle %}
-<section class="cl_hero_banner">
-  <div class="container" id="cl_hero_banner-{{ section.id }}">
+<section class="hero_banner">
+  <div class="container" id="hero_banner-{{ section.id }}">
     <div class="banner_inner">
       <div class="banner_content">
           {% if section.settings.heading != blank %}
